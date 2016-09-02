@@ -27,7 +27,7 @@
 		<echo message="CLEANUP target is starting ...${line.separator}" />
 		<delete failonerror="false" verbose="true">
 			<fileset dir="${basedir}" includes="TEST*.xml" />
-			<fileset dir="${basedir}" includes="soapui*.log" />
+			<fileset dir="${basedir}" includes="*.log" />
 		</delete>
 	</target>
 
