@@ -446,14 +446,6 @@ jmsConfig.userID = testRunner.testCase.getPropertyValue('userID')
 jmsConfig.passwd = testRunner.testCase.getPropertyValue('passwd')
 jmsConfig.timeout = parseLong((String) testRunner.testCase.getPropertyValue('timeout'))
 
-//responseHolder.declareNamespace('ns', "http://ws.cdyne.com/WeatherWS/")
-
-//String wSCity = responseHolder.getNodeValue('//ns:GetCityForecastByZIPResponse/ns:GetCityForecastByZIPResult/ns:WeatherStationCity')
-
-//log.info("${wSCity}")
-
-//assert('Jacksonville' == wSCity)
-
 String msg = responseHolder.getXml()
 
 JMSClient.write(jmsConfig, msg)
